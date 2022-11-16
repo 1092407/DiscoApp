@@ -16,8 +16,13 @@ import com.example.discoapp.databinding.ActivityRegisterBinding
 //import com.example.appericolo.ui.preferiti.contacts.ContactViewModel
 import com.google.firebase.auth.FirebaseAuth
 
+//queste due erano realtime db loro
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+
+//queste le ho messe io
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 /**
  * Classe per la gestione della registrazione di un nuovo utente
@@ -26,14 +31,17 @@ class RegisterActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityRegisterBinding
 
+    //questa di realtime db che usano ma è da cambiare
     lateinit var database: DatabaseReference
+
     lateinit var mFirebaseAuth: FirebaseAuth
+    lateinit var db = Firebase.firestore
 
     lateinit var name: String
     lateinit var surname: String
     lateinit var email: String
     lateinit var password: String
-    lateinit var cell_number: String
+   // lateinit var cell_number: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
