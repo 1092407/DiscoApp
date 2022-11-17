@@ -35,8 +35,7 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var database: DatabaseReference
 
     lateinit var mFirebaseAuth: FirebaseAuth
-    lateinit var db = Firebase.firestore
-
+    val db = Firebase.firestore
     lateinit var name: String
     lateinit var surname: String
     lateinit var email: String
