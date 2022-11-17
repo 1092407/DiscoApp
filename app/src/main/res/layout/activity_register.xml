@@ -50,7 +50,7 @@
             android:id="@+id/registerSurname"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint=" @string/cognome"
+            android:hint="@string/cognome"
             android:inputType="textEmailAddress"
             android:lines="1" />
 

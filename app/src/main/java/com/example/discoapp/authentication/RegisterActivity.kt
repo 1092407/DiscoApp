@@ -1,15 +1,11 @@
 package com.example.discoapp.authentication
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.lifecycle.ViewModelProvider
-import com.example.discoapp.utils.CommonInfo
 //import com.example.appericolo.ui.preferiti.contacts.database.Contact
 import com.example.discoapp.databinding.ActivityRegisterBinding
 

@@ -4,4 +4,6 @@
     <string name="cellulare">Cellulare</string>
     <string name="required">Required</string>
     <string name="nome">Nome</string>
+    <string name="app_name">DiscoApp</string>
+    <string name="cognome">Cognome</string>
 </resources>
