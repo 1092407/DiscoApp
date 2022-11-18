@@ -8,18 +8,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DiscoApp">
-
+        <activity
+            android:name=".ui.provaact.provaactActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".NavDrawActivity"
+            android:exported="false"
+            android:label="@string/title_activity_nav_draw"
+            android:theme="@style/Theme.DiscoApp.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".authentication.RegisterActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
-            />
-
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".authentication.LoginActivity"
             android:exported="true"
