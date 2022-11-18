@@ -47,18 +47,22 @@ Se effettui la prenotazione ad un evento con la nostra app e
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="374dp"
+        android:layout_height="51dp"
+        android:text="Logout"
 
-        android:text="Powered by"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        tools:ignore="UnknownId" />
+        tools:layout_editor_absoluteY="523dp"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
