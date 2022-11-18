@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import com.example.discoapp.R
 import com.example.discoapp.MainActivity  //dove finisce dopo il login in teoria
 import com.example.discoapp.databinding.ActivityLoginBinding
@@ -39,6 +40,7 @@ class LoginActivity : AppCompatActivity() {
         binding.registerFromLoginButton.setOnClickListener {
             val register_intent = Intent(this, RegisterActivity::class.java)
             startActivity(register_intent)
+
 
         }
 

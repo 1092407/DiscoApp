@@ -45,7 +45,7 @@ class RegisterActivity : AppCompatActivity() {
 
 
         mFirebaseAuth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance("https://console.firebase.google.com/project/discoapp-7b574/database/discoapp-7b574-default-rtdb/data")
+        database = FirebaseDatabase.getInstance("https://discoapp-7b574-default-rtdb.firebaseio.com/")
                 .getReference("users")
 
         binding.registerButton.setOnClickListener {
