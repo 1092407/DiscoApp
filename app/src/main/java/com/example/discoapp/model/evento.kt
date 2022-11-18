@@ -1,5 +1,5 @@
 package com.example.discoapp.model
-
+//
 class evento {
     var id: String? = null
     var luogo: String? = null
