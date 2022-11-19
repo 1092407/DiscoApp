@@ -48,7 +48,7 @@ Se effettui la prenotazione ad un evento con la nostra app e
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/logoutbutton"
         android:layout_width="374dp"
         android:layout_height="51dp"
         android:text="Logout"

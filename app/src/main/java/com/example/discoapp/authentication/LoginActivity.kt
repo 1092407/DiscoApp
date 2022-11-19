@@ -8,11 +8,11 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.discoapp.R
-import com.example.discoapp.MainActivity  //dove finisce dopo il login in teoria
+import com.example.discoapp.MainActivity
 import com.example.discoapp.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
-
+import com.example.discoapp.NavDrawActivity
 
 /**
  * Classe per la gestione del login dell'utente
@@ -33,7 +33,12 @@ class LoginActivity : AppCompatActivity() {
         var auth = FirebaseAuth.getInstance()
         val currentUser = auth.currentUser
         if (currentUser !=null){
-            startActivity(Intent(this, MainActivity::class.java))
+            //commento per vedere se resta su quella con menu
+           // startActivity(Intent(this, MainActivity::class.java))
+
+            startActivity(Intent(this, NavDrawActivity::class.java))
+
+
             finish()
         }
 
@@ -61,7 +66,10 @@ class LoginActivity : AppCompatActivity() {
                             contactViewModel.putFavFromRemoteToLocal()
                              */
 
-                            val MoveToMain = Intent(this, MainActivity::class.java)
+                            //prova per vedere se va verso il menu
+                            //val MoveToMain = Intent(this, MainActivity::class.java)
+
+                            val MoveToMain = Intent(this, NavDrawActivity::class.java)
 
                             // salvataggio registration token
                             //contactViewModel.retrieveAndStoreToken()

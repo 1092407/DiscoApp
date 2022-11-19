@@ -8,6 +8,13 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
+
+
+       <!--
+
+       questi erano di default quando usavo
+       activity standar per nav drawer
+
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
@@ -16,24 +23,58 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
+
+          -->
+
+      <!--
+      questo solo per prova perche poi
+      logout lo faccio con un bottone su home frag
+
+
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_baseline_logout_24"
             android:title="logout" />
+
+      -->
+
         <item
             android:id="@+id/info"
             android:icon="@drawable/ic_baseline_info_24"
             android:title="info" />
 
+        <!--
+        questa era solo per provare a
+        navigare verso activity anziche fragment
+
         <item
             android:id="@+id/provaact"
             android:icon="@drawable/ic_baseline_info_24"
             android:title="provaact" />
+       -->
+
 
         <item
             android:id="@+id/dovesiamo"
             android:icon="@drawable/ic_baseline_place_24"
             android:title="Dove saimo" />
+
+        <item
+            android:id="@+id/lista"
+            android:icon="@drawable/ic_baseline_list_24"
+            android:title="Lista eventi" />
+
+        <item
+            android:id="@+id/prenotazioni"
+            android:icon="@drawable/ic_baseline_checklist_24"
+            android:title="Prenotazioni" />
+
+        <item
+            android:id="@+id/recensioni"
+            android:icon="@drawable/ic_baseline_add_reaction_24"
+            android:title="Recensioni" />
+
+
 
     </group>
 </menu>

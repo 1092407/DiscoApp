@@ -21,6 +21,9 @@
     <string name="menu_info">info</string>
     <string name="menu_provaact">provaact</string>
     <string name="menu_dovesiamo">provaact</string>
+    <string name="menu_lista">provaact</string>
+    <string name="menu_prenotazioni">provaact</string>
+    <string name="menu_recensioni">provaact</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

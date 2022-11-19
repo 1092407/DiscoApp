@@ -5,29 +5,12 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
+    <!--SERVONO -->
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.discoapp.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.discoapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.discoapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_logout"
-        android:name="com.example.discoapp.ui.logout.LogoutFragment"
-        android:label="@string/menu_logout"
-        tools:layout="@layout/fragment_logout" />
 
     <fragment
         android:id="@+id/nav_info"
@@ -41,10 +24,45 @@
         android:label="DoveSiamo"
         tools:layout="@layout/fragment_maps2" />
 
-    <activity
-        android:id="@+id/nav_provaact"
-        android:name="com.example.discoapp.ui.provaact.provaactActivity"
-        android:label="@string/menu_provaact"
-        tools:layout="@layout/activity_provaact" />
+
+
+    <fragment
+        android:id="@+id/nav_lista"
+        android:name="com.example.discoapp.ui.lista.listaFragment"
+        android:label="Listaeventi"
+        tools:layout="@layout/fragment_lista" />
+
+    <fragment
+        android:id="@+id/nav_prenotazioni"
+        android:name="com.example.discoapp.ui.prenotazioni.prenotazioniFragment"
+        android:label="Prenotazioni"
+        tools:layout="@layout/fragment_prenotazioni" />
+
+    <fragment
+        android:id="@+id/nav_recensioni"
+        android:name="com.example.discoapp.ui.recensioni.recensioniFragment"
+        android:label="Recensioni"
+        tools:layout="@layout/fragment_recensioni" />
+
+
+
+
+
+
+
+    <!--questa non serve poi -->
+
+
+    <!--questa non serve poi -->
+
+
+    <!--questa non serve poi -->
+
+
+
+
+
+    <!-- non serve poi -->
+
 
 </navigation>

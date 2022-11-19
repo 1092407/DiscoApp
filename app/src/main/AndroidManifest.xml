@@ -24,13 +24,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC0cLT4jaDt_TjaY8OD50mfHeKXPBnsDzA" />
 
-        <activity
-            android:name=".ui.provaact.provaactActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
+
         <activity
             android:name=".NavDrawActivity"
             android:exported="false"
@@ -40,6 +35,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".authentication.RegisterActivity"
             android:exported="false"
