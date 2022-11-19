@@ -43,13 +43,14 @@ class NavDrawActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
         */
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_nav_draw)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
-            setOf(   // messo solo le nav che servono
+            setOf(
                 R.id.nav_home, R.id.nav_info,
                 R.id.nav_dovesiamo,R.id.nav_lista,R.id.nav_prenotazioni,R.id.nav_recensioni
             ), drawerLayout

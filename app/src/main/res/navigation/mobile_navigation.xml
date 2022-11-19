@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/nav_dovesiamo"
         android:name="com.example.discoapp.ui.DoveSiamo.MapsFragment2"
-        android:label="DoveSiamo"
+        android:label="@string/menu_dovesiamo"
         tools:layout="@layout/fragment_maps2" />
 
 
@@ -29,19 +29,19 @@
     <fragment
         android:id="@+id/nav_lista"
         android:name="com.example.discoapp.ui.lista.listaFragment"
-        android:label="Listaeventi"
+        android:label="@string/menu_lista"
         tools:layout="@layout/fragment_lista" />
 
     <fragment
         android:id="@+id/nav_prenotazioni"
         android:name="com.example.discoapp.ui.prenotazioni.prenotazioniFragment"
-        android:label="Prenotazioni"
+        android:label="@string/menu_prenotazioni"
         tools:layout="@layout/fragment_prenotazioni" />
 
     <fragment
         android:id="@+id/nav_recensioni"
         android:name="com.example.discoapp.ui.recensioni.recensioniFragment"
-        android:label="Recensioni"
+        android:label="@string/menu_recensioni"
         tools:layout="@layout/fragment_recensioni" />
 
 
