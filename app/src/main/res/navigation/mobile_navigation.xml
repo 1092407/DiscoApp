@@ -35,6 +35,12 @@
         android:label="@string/menu_info"
         tools:layout="@layout/fragment_info" />
 
+    <fragment
+        android:id="@+id/nav_dovesiamo"
+        android:name="com.example.discoapp.ui.DoveSiamo.MapsFragment2"
+        android:label="DoveSiamo"
+        tools:layout="@layout/fragment_maps2" />
+
     <activity
         android:id="@+id/nav_provaact"
         android:name="com.example.discoapp.ui.provaact.provaactActivity"

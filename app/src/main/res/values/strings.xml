@@ -20,6 +20,9 @@
     <string name="menu_logout">Logout</string>
     <string name="menu_info">info</string>
     <string name="menu_provaact">provaact</string>
+    <string name="menu_dovesiamo">provaact</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
