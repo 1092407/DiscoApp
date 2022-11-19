@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DISCO APP"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -34,12 +34,14 @@
         android:id="@+id/descrizione"
         android:layout_width="376dp"
         android:layout_height="150dp"
-        android:layout_marginTop="24dp"
-        android:text="Sei pronto a divertirti?
+        android:layout_marginTop="250dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text=" Sei pronto a divertirti?
   Grazie alla nostra app potrai scoprire i migliori eventi vicino a Porto San Giorgio.
 Se effettui la prenotazione ad un evento con la nostra app e
    la mostrerai all'ingresso per te ci sarnno molte soprese,"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.636"
@@ -51,18 +53,14 @@ Se effettui la prenotazione ad un evento con la nostra app e
         android:id="@+id/logoutbutton"
         android:layout_width="374dp"
         android:layout_height="51dp"
+        android:layout_marginTop="56dp"
         android:text="Logout"
 
-
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="523dp"
+        app:layout_constraintTop_toBottomOf="@+id/descrizione"
         tools:ignore="MissingConstraints" />
-
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
