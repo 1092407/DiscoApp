@@ -39,8 +39,8 @@
         android:paddingRight="8dp"
         android:text=" Sei pronto a divertirti?
   Grazie alla nostra app potrai scoprire i migliori eventi vicino a Porto San Giorgio.
-Se effettui la prenotazione ad un evento con la nostra app e
-   la mostrerai all'ingresso per te ci sarnno molte soprese,"
+  Effettua prenotazioni con app,mostrala all'ingresso e avrai delle sorprese
+"
         android:textColor="@android:color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
