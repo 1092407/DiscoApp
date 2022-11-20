@@ -1,42 +1,56 @@
 package com.example.discoapp.authentication
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-//import com.example.appericolo.ui.preferiti.contacts.database.Contact
-import com.example.discoapp.databinding.ActivityRegisterBinding
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.navArgs
 
-//import com.example.appericolo.ui.preferiti.contacts.ContactViewModel
+import com.example.discoapp.databinding.ActivityRegisterBinding
+import com.example.discoapp.firedb.UserDB
+
+
 import com.google.firebase.auth.FirebaseAuth
 
-//queste due erano realtime db loro
+
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 //queste le ho messe io
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.launch
 
 /**
  * Classe per la gestione della registrazione di un nuovo utente
  */
+
 class RegisterActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityRegisterBinding
 
-    //questa di realtime db che usano ma è da cambiare
-    lateinit var database: DatabaseReference
+    //questa era real time db
+    //lateinit var database: DatabaseReference
 
     lateinit var mFirebaseAuth: FirebaseAuth
     val db = Firebase.firestore
+
+    val vmodel= ViewModelAuth()
+    //val userDB=UserDB()
     lateinit var name: String
     lateinit var surname: String
     lateinit var email: String
     lateinit var password: String
-   // lateinit var cell_number: String
+   lateinit var cell_number: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,9 +58,8 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        mFirebaseAuth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance("https://discoapp-7b574-default-rtdb.firebaseio.com/")
-                .getReference("users")
+
+
 
         binding.registerButton.setOnClickListener {
             set_helpers()
@@ -57,7 +70,7 @@ class RegisterActivity : AppCompatActivity() {
     fun set_helpers(){
         binding.EmailContainer.helperText = validEmail()
         binding.passwordContainer.helperText = validPassword()
-       // binding.phoneContainer.helperText = validPhone()
+        binding.phoneContainer.helperText = validPhone()
         binding.NameContainer.helperText = validName()
         binding.SurnameContainer.helperText = validSurame()
     }
@@ -68,7 +81,7 @@ class RegisterActivity : AppCompatActivity() {
         val validSurname = binding.SurnameContainer.helperText == null
         val validEmail = binding.EmailContainer.helperText == null
         val validPassword = binding.passwordContainer.helperText == null
-       // val validPhone = binding.phoneContainer.helperText == null
+       val validPhone = binding.phoneContainer.helperText == null
 
         //se gli helper text sono tutti null -> creo l'account
         if (validName && validSurname && validEmail && validPassword )
@@ -80,19 +93,52 @@ class RegisterActivity : AppCompatActivity() {
     private fun createAccount() {
         name = binding.registerName.text.toString()
         surname = binding.registerSurname.text.toString()
-      //  cell_number = binding.registerCell.text.toString()
+        cell_number = binding.registerCell.text.toString()
         password = binding.registerPassword.text.toString()
         email = binding.registerEmail.text.toString()
 
+        lifecycleScope.launch {
+
+                if (vmodel.singUp(email, password) != null) {
+
+                    vmodel.addAuthUtenteOnDB(name, surname, email, cell_number)
+
+                    val intent = Intent(applicationContext, LoginActivity::class.java)
+
+                    startActivity(intent)
+                    finish()
+                }
+
+        }
+
+        //io prova
+        /*
+        val addobserver=Observer<Boolean>{
+            if (vmodel.status.value==true) {
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+        vmodel.status.observe(this,addobserver)*/
+
+        /*
         mFirebaseAuth
             .createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    val user = User(name, surname, email)
+                   // val user = User(name, surname, email)
+
+                    /*
                     //inserisco l'utente nel db realtime
                     database.child(FirebaseAuth.getInstance().currentUser!!.uid).setValue(user)
-                    val intent = Intent(this, LoginActivity::class.java)
-                    //store registration token
+                    */
+
+                    //salva dati nel dbfirestore con scope
+                   vmodel.addUtente(name, surname, email, cell_number)
+
+                  //  val intent = Intent(this, LoginActivity::class.java)
+
 
                     /*
                     val contactViewModel : ContactViewModel = ViewModelProvider(this).get(
@@ -101,8 +147,8 @@ class RegisterActivity : AppCompatActivity() {
                     */
 
                     //
-                    startActivity(intent)
-                    finish()
+                  //  startActivity(intent)
+                    //finish()
 
                 } else {
                     //Log.w(TAG, "createUserWithEmail:failure", task.exception)
@@ -111,7 +157,8 @@ class RegisterActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-            }
+            } */
+
     }
 
     private fun validEmail(): String?
@@ -147,7 +194,7 @@ class RegisterActivity : AppCompatActivity() {
         return null
     }
 
-    /*
+
     private fun validPhone(): String?
     {
         val phoneText = binding.registerCell.text.toString()
@@ -161,7 +208,7 @@ class RegisterActivity : AppCompatActivity() {
         }
         return null
     }
-*/
+
     private fun validName(): String?
     {
         val nameText = binding.registerName.text.toString()
@@ -208,3 +255,4 @@ class RegisterActivity : AppCompatActivity() {
             .show()
     }
 }
+

@@ -16,6 +16,8 @@ import com.example.discoapp.authentication.LoginActivity
 import com.example.discoapp.authentication.RegisterActivity
 import com.example.discoapp.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class HomeFragment : Fragment() {
@@ -49,10 +51,28 @@ class HomeFragment : Fragment() {
 
 
 
+
+
         return root
     }
 
 
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.logoutbutton.setOnClickListener {
+
+            Firebase.auth.signOut()
+            val login = Intent(activity?.applicationContext, LoginActivity::class.java)
+
+            ///////////
+            activity?.finish()
+            /////////
+            activity?.startActivity(login)
+        }
+
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
