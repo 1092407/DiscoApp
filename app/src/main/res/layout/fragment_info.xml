@@ -19,7 +19,7 @@ di tutti  questi eventi  avrai anche la possibilità esclusiva
  di prenotarti. Mostrando la prenotazione
   tramite questa app all'entrata avrai una fila dedicata per accedere al locale
 ed un drink offerto dalla casa"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

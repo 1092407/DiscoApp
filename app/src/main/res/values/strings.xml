@@ -16,10 +16,10 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_info">info</string>
-    <string name="menu_dovesiamo">provaact</string>
-    <string name="menu_lista">provaact</string>
-    <string name="menu_prenotazioni">provaact</string>
-    <string name="menu_recensioni">provaact</string>
+    <string name="menu_dovesiamo">I nostri locali</string>
+    <string name="menu_lista">Lista eventi</string>
+    <string name="menu_prenotazioni">Prenotazioni</string>
+    <string name="menu_recensioni">Recensioni</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

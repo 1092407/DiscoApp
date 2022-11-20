@@ -39,7 +39,7 @@
       -->
 
         <item
-            android:id="@+id/info"
+            android:id="@+id/nav_info"
             android:icon="@drawable/ic_baseline_info_24"
             android:title="info" />
 
@@ -55,22 +55,22 @@
 
 
         <item
-            android:id="@+id/dovesiamo"
+            android:id="@+id/nav_dovesiamo"
             android:icon="@drawable/ic_baseline_place_24"
             android:title="Dove saimo" />
 
         <item
-            android:id="@+id/lista"
+            android:id="@+id/nav_lista"
             android:icon="@drawable/ic_baseline_list_24"
             android:title="Lista eventi" />
 
         <item
-            android:id="@+id/prenotazioni"
+            android:id="@+id/nav_prenotazioni"
             android:icon="@drawable/ic_baseline_checklist_24"
             android:title="Prenotazioni" />
 
         <item
-            android:id="@+id/recensioni"
+            android:id="@+id/nav_recensioni"
             android:icon="@drawable/ic_baseline_add_reaction_24"
             android:title="Recensioni" />
 
